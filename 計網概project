@@ -46,7 +46,7 @@ int main (int argc , char **argv) {
   printf("Server connected\n");
 
   /* Handle message, read current from the server */
-  read_bytes = read(cli_fd, buf, sizeof(buf));//read server¶Ç°e¹L¨Óªº°T®§ 
+  read_bytes = read(cli_fd, buf, sizeof(buf));//read serverå‚³é€éä¾†çš„è¨Šæ¯ 
   if (read_bytes < 0) {
     perror("Read failed");
     exit(1);
@@ -59,26 +59,26 @@ int main (int argc , char **argv) {
   char fromclient3[] = {"finish lab3~"};
   char fromserver[100] = {};
   
-  send(cli_fd,fromclient,sizeof(fromclient),0);//¶Ç°ehi there 
-  recv(cli_fd,fromserver,sizeof(fromserver),0);//±µ¦¬server 
+  send(cli_fd,fromclient,sizeof(fromclient),0);//å‚³é€hi there 
+  recv(cli_fd,fromserver,sizeof(fromserver),0);//æ¥æ”¶server 
   
   printf("%s\n",fromclient);
-  printf("Server returns : %s\n\n",fromserver);//¦A¦L¥X 
+  printf("Server returns : %s\n\n",fromserver);//å†å°å‡º 
   
   
-  send(cli_fd,fromclient2,sizeof(fromclient2),0);//¶Ç°e(¦¨¥\ 
+  send(cli_fd,fromclient2,sizeof(fromclient2),0);//å‚³é€(æˆåŠŸ 
   
   
-  recv(cli_fd,fromserver,sizeof(fromserver),0);//¦A±µ¦¬server 
+  recv(cli_fd,fromserver,sizeof(fromserver),0);//å†æ¥æ”¶server 
   printf("%s\n",fromclient2);
-  printf("Server returns : %s\n\n",fromserver);//¦A¦L¥X
+  printf("Server returns : %s\n\n",fromserver);//å†å°å‡º
   
-  send(cli_fd,fromclient3,sizeof(fromclient3),0);//¶Ç°e(¦¨¥\ 
+  send(cli_fd,fromclient3,sizeof(fromclient3),0);//å‚³é€(æˆåŠŸ 
   
   
-  recv(cli_fd,fromserver,sizeof(fromserver),0);//¦A±µ¦¬server
+  recv(cli_fd,fromserver,sizeof(fromserver),0);//å†æ¥æ”¶server
   printf("%s\n",fromclient3);
-  printf("Server returns : %s\n\n",fromserver);//¦A¦L¥X
+  printf("Server returns : %s\n\n",fromserver);//å†å°å‡º
   
   
   
