@@ -1,8 +1,4 @@
-/*
- * Simple Time Client For 2016 Introduction to Computer Network
- * Author: vicky-sunshine @ HSNL-TAs
- * 2016/09
- */
+
 
 #include <stdio.h>
 #include <stdlib.h>
